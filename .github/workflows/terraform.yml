@@ -1,4 +1,4 @@
-name: 'Terraform deploy to azure'
+name: 'Terraform DB deploy to azure'
 
 on:
   push:
