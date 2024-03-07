@@ -42,7 +42,8 @@ jobs:
 
     # Generates an execution plan for Terraform
     - name: Terraform Plan
-      run: terraform plan -var db_username=$DB_USERNAME db_password=$DB_PASSWORD
+      run: terraform plan -var db_username=$DB_USERNAME -var db_password=$DB_PASSWORD 
+      
       working-directory: ${{ env.ROOT_PATH }}
 
 #  terraform_apply:
