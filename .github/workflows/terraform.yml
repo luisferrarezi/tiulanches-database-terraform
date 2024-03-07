@@ -74,7 +74,7 @@ jobs:
       working-directory: ${{ env.ROOT_PATH }}
 
     - name: Import Resouce Group
-      run: terraform import azurerm_resource_group.tiulanches_rg /subscriptions/$ARM_SUBSCRIPTION_ID/resourceGroups/tiulanches_rg
+      run: terraform import azurerm_resource_group.tiulanches_rg /subscriptions/$ARM_SUBSCRIPTION_ID/resourceGroups/tiulanches_rg -var db_username=$DB_USERNAME -var db_password=$DB_PASSWORD
       working-directory: ${{ env.ROOT_PATH }}      
       
     # Generates an execution plan for Terraform
