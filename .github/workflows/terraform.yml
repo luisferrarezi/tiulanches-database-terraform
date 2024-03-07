@@ -75,5 +75,6 @@ jobs:
 
     # Generates an execution plan for Terraform
     - name: Terraform apply
-      run: terraform apply --auto-approve -var db_username=$DB_USERNAME -var db_password=$DB_PASSWORD
+      run: terraform import azurerm_resource_group.tiulanches_rg /subscriptions/$ARM_SUBSCRIPTION_ID/resourceGroups/tiulanches_rg
+           terraform apply --auto-approve -var db_username=$DB_USERNAME -var db_password=$DB_PASSWORD
       working-directory: ${{ env.ROOT_PATH }}      
