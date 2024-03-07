@@ -1,12 +1,12 @@
-resource "azurerm_resource_group" "tiulanches_rg" {
-  name     = "tiulanches_rg"
+resource "azurerm_resource_group" "tiulanches_db_rg" {
+  name     = "tiulanches_db_rg"
   location = "brazilsouth"
 }
 
 resource "azurerm_mysql_server" "tiulanches_mysql_srv" {
   name                = "tiulanchessrv"
-  location            = azurerm_resource_group.tiulanches_rg.location
-  resource_group_name = azurerm_resource_group.tiulanches_rg.name
+  location            = azurerm_resource_group.tiulanches_db_rg.location
+  resource_group_name = azurerm_resource_group.tiulanches_db_rg.name
 
   administrator_login          = var.db_username
   administrator_login_password = var.db_password
@@ -26,7 +26,7 @@ resource "azurerm_mysql_server" "tiulanches_mysql_srv" {
 
 resource "azurerm_mysql_firewall_rule" "sql_azure_services" {
   name                = "azure_services"
-  resource_group_name = azurerm_resource_group.tiulanches_rg.name
+  resource_group_name = azurerm_resource_group.tiulanches_db_rg.name
   server_name         = azurerm_mysql_server.tiulanches_mysql_srv.name
   start_ip_address    = "0.0.0.0"
   end_ip_address      = "0.0.0.0"
