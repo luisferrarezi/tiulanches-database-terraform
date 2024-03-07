@@ -75,7 +75,8 @@ jobs:
 
     - name: Import Resouce Group
       run: terraform import azurerm_resource_group.tiulanches_rg /subscriptions/$ARM_SUBSCRIPTION_ID/resourceGroups/tiulanches_rg
-
+      working-directory: ${{ env.ROOT_PATH }}      
+      
     # Generates an execution plan for Terraform
     - name: Terraform apply
       run: terraform apply --auto-approve -var db_username=$DB_USERNAME -var db_password=$DB_PASSWORD
