@@ -79,5 +79,5 @@ jobs:
       
     # Generates an execution plan for Terraform
     - name: Terraform apply
-      run: terraform apply --auto-approve -var db_username=$DB_USERNAME -var db_password=$DB_PASSWORD
+      run: terraform apply -var db_username=$DB_USERNAME -var db_password=$DB_PASSWORD --auto-approve
       working-directory: ${{ env.ROOT_PATH }}      
