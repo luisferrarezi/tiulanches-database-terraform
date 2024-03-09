@@ -23,11 +23,3 @@ resource "azurerm_mysql_server" "tiulanches_mysql_srv" {
   ssl_enforcement_enabled           = true
   ssl_minimal_tls_version_enforced  = "TLS1_2"
 }
-
-resource "azurerm_mysql_firewall_rule" "sql_azure_services" {
-  name                = "azure_services"
-  resource_group_name = azurerm_resource_group.tiulanches_db_rg.name
-  server_name         = azurerm_mysql_server.tiulanches_mysql_srv.name
-  start_ip_address    = "0.0.0.0"
-  end_ip_address      = "0.0.0.0"
-}
