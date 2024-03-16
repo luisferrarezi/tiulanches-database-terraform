@@ -28,7 +28,7 @@ Optei por escolher essa base devido as razões abaixo:
 
 Segue a modelagem de como ficou a organização das tabelas e campos.
 
-![](https://luisferrarezi.notion.site/Modelagem-de-dados-9c30c3abc4024c06bb815341fb0b3f30)
+![]([https://luisferrarezi.notion.site/Modelagem-de-dados-9c30c3abc4024c06bb815341fb0b3f30](https://luisferrarezi.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F62941c71-5c2d-41d6-8c4f-a5f5b14de56c%2F1feac792-8695-4cb6-8c6d-75e908229bc8%2FUntitled.png?table=block&id=f356e806-1c5c-4ea9-829e-ed645f89b5fe&spaceId=62941c71-5c2d-41d6-8c4f-a5f5b14de56c&width=1730&userId=&cache=v2))
 
 # Arquitetura
 Este repositório é exclusivo para cuidar da estrutura necessário para a utilização do banco MySql.
