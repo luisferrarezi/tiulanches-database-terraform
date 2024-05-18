@@ -24,6 +24,15 @@ Optei por escolher essa base devido as razões abaixo:
 - Ser seguro e confiável
 - Ser gratuíto para o momento atual do projeto 
 
+# MongoDB
+## Porque ele?
+Optei por escolher essa base devido as razões abaixo:
+
+- Comunidade extremamente ampla.
+- Ser seguro e confiável
+- Ser gratuíto para o momento atual do projeto
+- Será utilizado apenas como meio de registrar o processo do pagamento
+
 ## Modelagem de dados
 
 Segue a modelagem de como ficou a organização das tabelas e campos.
@@ -51,6 +60,8 @@ Na azure foi criado o usuário github para que ele tenha as permissões necessá
 Através do Terraform é criada a estrutura do banco de dados com usuário e senha para ser utilizado pela aplicação preservando assim o usuário ROOT.
 
 A versão do MySql utilizada é a 8.0, disponibilizado apenas 5 GB de armazenamento a princípio e foi deixado habilitado para que a própria Azure cuide da necessidade de se aumentar a capacidade dele.
+
+MongoDB através do CosmosDB da Azure.
 
 ### Variáveis de Ambiente
 Existem variáveis de ambiente que são indispensáveis para que a estrutura seja corretamente criada:
