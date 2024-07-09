@@ -3,7 +3,7 @@ name: 'DB Infra deploy to azure'
 on:
   push:
     branches: [ "main" ]  
-
+ 
 env:
   ARM_CLIENT_ID: ${{secrets.CLIENT_ID}}
   ARM_CLIENT_SECRET: ${{secrets.CLIENT_SECRET}}
